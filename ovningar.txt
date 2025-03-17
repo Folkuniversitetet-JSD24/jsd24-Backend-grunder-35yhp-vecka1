@@ -1,0 +1,17 @@
+Lätta:
+1:
+✅ Skapa en modul dateModule.js som returnerar dagens datum.
+
+✅ Importera den i server.js.
+
+Medel:
+2:
+✅ Skapa en modul som läser och skriver JSON-data till en fil.
+✅ Använd fs för att hantera JSON-filen.
+
+3:
+Bygg en enkel loggningsmodul - Skapa en modul som loggar alla händelser i ett program till en textfil.
+
+Svår:
+4:
+Simulera en API-request - Skapa en modul som läser data från en JSON-fil och returnerar det som en falsk API-response när en server anropas.
