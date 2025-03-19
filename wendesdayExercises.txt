@@ -1,0 +1,117 @@
+Dagens övningar som fokuserar på det ni hittils har gått igenom: 
+✅ NPM & package.json
+✅ Require vs Import (CommonJS vs ES Modules)
+✅ Läsning och skrivning av JSON- och textfiler
+✅ Skapa och använda egna moduler
+✅ Använda Core-moduler (fs, path, process)
+
+-----------------------------------------------------
+
+🟢 Enkla Övningar
+
+1️⃣ Läs och skriv JSON-data
+
+📌 Instruktion:
+1. Skapa en JSON-fil data.json med följande innehåll:
+{
+    "message": "Hej från JSON!",
+    "version": 1.0
+}
+
+2. Skapa en modul jsonHandler.js som kan läsa och skriva data till JSON-filen.
+
+3. Använd modulen i app.js.
+
+✅ Kör: node app.js
+✅ Förväntat resultat: version i data.json ska öka med 1 varje gång programmet körs.
+--------------------------------
+2️⃣ Skapa och använda en egen modul
+
+📌 Instruktion:
+1. Skapa en modul math.js.
+
+2. Skapa en fil app.js och använd modulen.
+
+✅ Kör: node app.js
+✅ Förväntat resultat: "5 + 3 = 8" och "10 - 7 = 3" skrivs ut i terminalen.
+---------------------------------
+3️⃣ Använd fs-modulen för att hantera textfiler
+
+📌 Instruktion:
+1. Skapa en fil fileHandler.js:
+const fs = require('fs');
+
+function writeFile(filename, content) {
+    fs.writeFileSync(filename, content);
+}
+
+function readFile(filename) {
+    return fs.readFileSync(filename, 'utf8');
+}
+
+module.exports = { writeFile, readFile };
+
+2. Skapa app.js och testa modulen: fileHandler.js.
+
+✅ Kör: node app.js
+✅ Förväntat resultat: "Hej från Node.js!" skrivs ut och example.txt har skapats.
+
+----------------------------------------
+🟡 Medelsvåra Övningar
+
+4️⃣ Bygg en Config-modul
+
+📌 Instruktion:
+1. Skapa en modul config.js som returnerar inställningar för en app.
+
+2. Använd modulen i app.js:
+const config = require('./config');
+console.log(`App: ${config.appName}, Version: ${config.version}, Körs på port: ${config.port}`);
+
+✅ Kör: node app.js
+✅ Förväntat resultat: Skriver ut konfigurationsvärdena i terminalen.
+
+-----------------------------------------
+5️⃣ Automatisk loggning med fs.appendFileSync
+
+📌 Instruktion:
+1. Skapa en modul logger.js
+
+2. Använd modulen i app.js:
+const logMessage = require('./logger');
+
+logMessage('Applikationen startades.');
+logMessage('En användare loggade in.');
+
+✅ Kör: node app.js
+✅ Förväntat resultat: Skapar en log.txt-fil med loggade händelser.
+------------------------------------------
+🔴 Svåra Övningar
+
+6️⃣ Skapa en textbaserad databas
+
+📌 Instruktion:
+1. Skapa en fil database.js.
+
+2. Skapa app.js och testa modulen:
+const { saveUser, getUsers } = require('./database');
+
+saveUser('Alice');
+saveUser('Bob');
+
+console.log('Registrerade användare:', getUsers());
+
+✅ Kör: node app.js
+✅ Förväntat resultat: "Alice" och "Bob" ska sparas i users.txt och sedan läsas ut.
+--------------------------------
+7️⃣ Skapa en interaktiv terminalapp
+
+📌 Instruktion:
+1. Installera readline-sync:
+npm install readline-sync
+
+2. Skapa app.js
+
+✅ Kör: node app.js
+✅ Förväntat resultat: Programmet frågar användaren om en anteckning och sparar den i notes.txt.
+----------------------------------------
