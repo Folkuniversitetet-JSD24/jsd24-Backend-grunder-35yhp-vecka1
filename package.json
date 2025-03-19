@@ -1,0 +1,16 @@
+{
+  "name": "jsd24-backend-grunder-35yhp-vecka1",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "* ✅ Vad är Node.js?\r * ✅ Core-moduler (http, fs, path)\r * ✅ Egna moduler (export/import)\r * ✅ NPM och paket (dependencies, devDependencies)\r * ✅ ES6-moduler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
